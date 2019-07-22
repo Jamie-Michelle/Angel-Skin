@@ -1,0 +1,113 @@
+Angel Skin release No. 1 (July 22, 2019) by Jamie Michelle ( https://github.com/Jamie-Michelle ). Angel Skin files released under the GNU General Public License, Version 2.
+
+Angel Skin originally created Feb. 21, 2017. These instructions originally created Jan. 16, 2019.
+
+WARNING: Deploy this eye-candy safely. End-user assumes responsibility for color-induced catatonic states.
+
+####################
+
+Angel Skin Instructions
+
+
+Step 1:
+
+Used GIMP 2.10.8 to create a 1*24 pixels image with the following colors in hexadecimal:
+
+ff0000
+ff3f00
+ff7f00
+ffbf00
+ffff00
+bfff00
+7fff00
+3fff00
+00ff00
+00ff3f
+00ff7f
+00ffbf
+00ffff
+00bfff
+007fff
+003fff
+0000ff
+3f00ff
+7f00ff
+bf00ff
+ff00ff
+ff00bf
+ff007f
+ff003f
+
+24-colors.png
+
+
+Step 2:
+
+Used GIMP to create 1*72 pixels image with three instances of '24-colors.png' pasted end-to-end
+
+24-colors-1x72.png
+
+
+Step 3:
+
+Used ImageMagick 7.0.8.21 'convert' program in thus manner:
+
+$ convert 24-colors-1x72.png -filter Lagrange -resize 1x3264\! 24-colors-1x72-Lagrange-1x3264.png
+
+
+Step 4:
+
+From '24-colors-1x72-Lagrange-1x3264.png', cut out the middle 1088 pixels with GIMP
+
+24-colors-1x72-Lagrange-1x1088.png
+
+
+Step 5:
+
+Used GIMP to scale '24-colors-1x72-Lagrange-1x1088.png' to 1920*1088 pixels with "None" as the interpolation
+
+Rainbow-Lagrange-1920x1088.png
+
+
+Step 6:
+
+With POV-Ray 3.7.0.8:
+
+$ povray sphere-part.pov Width=2048 Height=2048 Antialias=On Antialias_Threshold=0
+
+sphere-part.png
+
+
+Step 7:
+
+Used GIMP to cut out the middle 832*832 pixels of 'sphere-part.png'
+
+sphere-part-832.png
+
+
+Step 8:
+
+Used GIMP to increase the contrast +46
+
+sphere-part-832-contrast+46.png
+
+
+Step 9:
+
+Used GIMP to scale 'sphere-part-832-contrast+46.png' to 32*32 pixels with "Cubic" as the interpolation (actually, decimation in this case)
+
+sphere-part-32-contrast+46.png
+
+
+Step 10:
+
+Used Gimp to non-rotatively and non-mirroringly tile a 1920*1088 pixels canvas with 'sphere-part-32-contrast+46.png'
+
+sphere-part-32-contrast+46-1920x1088.png
+
+
+Step 11:
+
+Used GIMP to layer 'Rainbow-Lagrange-1920x1088.png' and 'sphere-part-32-contrast+46-1920x1088.png' together with 50.0% opacity using Mode "Normal (legacy)"
+
+Rainbowy-Angel-Skin-1920x1088.png
