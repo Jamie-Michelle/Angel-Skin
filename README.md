@@ -4,6 +4,8 @@ Angel Skin is a beauteous computer-desktop background/wallpaper image here with 
 
 The desktop-environment theme featured below is entitled Computing Machine, and is available here: https://github.com/Jamie-Michelle/Computing-Machine
 
+The Conky system-monitor setup depicted below is available here: https://github.com/Jamie-Michelle/Conky-Files
+
 ![Rainbowy-Angel-Skin-1920x1088.png](https://raw.githubusercontent.com/Jamie-Michelle/Angel-Skin/master/Rainbowy-Angel-Skin-1920x1088.png)
 
 And here is Angel Skin in action:
